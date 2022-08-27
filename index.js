@@ -1,5 +1,14 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  const forward = []
+  const backward = [];
+
+  for (letter of word){
+    forward.push(letter)
+    backward.unshift(letter)
+  }
+  console.log (`forward: ${forward.toString()} backward: ${backward.toString()}`)
+  return forward.toString() === backward.toString()
 }
 
 /* 
